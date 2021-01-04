@@ -1,9 +1,11 @@
 import { Query, Resolver } from "type-graphql";
 
+import { Post } from "../entities/Post";
+
 @Resolver()
 export class PostResolver {
-  @Query(() => String)
-  hello() {
-    return "world";
+  @Query(() => [Post])
+  posts() {
+    return Post.find();
   }
 }

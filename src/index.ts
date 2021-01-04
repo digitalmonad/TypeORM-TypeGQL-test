@@ -1,7 +1,7 @@
 import "reflect-metadata";
 
 import { ApolloServer } from "apollo-server";
-import { PostResolver } from "./resolvers/postResolver";
+import { PostResolver } from "./resolvers/PostResolver";
 import { buildSchema } from "type-graphql";
 import { createConnection } from "typeorm";
 
