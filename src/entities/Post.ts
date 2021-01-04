@@ -8,15 +8,15 @@ export class Post extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: string;
 
-  @Field()
+  @Field(() => String)
   @Column()
   title: string;
 
-  @Field()
+  @Field(() => String)
   @Column()
   author: string;
 
-  @Field()
+  @Field(() => Boolean)
   @Column({ default: false })
   isPublished: boolean;
 }
